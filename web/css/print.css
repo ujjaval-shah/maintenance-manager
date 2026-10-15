@@ -1,0 +1,14 @@
+/* Print only the document (receipt / report); hide app chrome. */
+@page { size: A4; margin: 14mm; }
+
+body { background: #fff; }
+.no-print, .topbar, .tabs, .toolbar, .actions, .btn, .page-head, .report-cards, #modal-root, #toast-root { display: none !important; }
+.view { max-width: none; padding: 0; margin: 0; }
+.card { border: none; padding: 0; margin: 0; }
+.doc { border: none; border-radius: 0; padding: 0; }
+.table-wrap { border: none; overflow: visible; }
+table.data th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+table.data th, table.data td { border: 1px solid #555; }
+table.data tfoot td { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+table.data tr { page-break-inside: avoid; }
+.print-only { display: block !important; }
